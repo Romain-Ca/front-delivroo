@@ -254,6 +254,11 @@ h3 {
   font-size: 1.2rem;
 }
 
+.increment-logo {
+  color: #32cdbd;
+  cursor: pointer;
+}
+
 /* ------- FOOTER -------- */
 
 .footer {
