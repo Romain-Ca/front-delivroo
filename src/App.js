@@ -11,9 +11,6 @@ import Footer from "./components/Footer";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faPlus, faMinus, faStar } from "@fortawesome/free-solid-svg-icons";
 library.add(faMinus, faPlus, faStar);
-{
-  /* <FontAwesomeIcon icon="star" /> */
-}
 
 function App() {
   // Changement d'Etat useState
@@ -23,7 +20,6 @@ function App() {
   // [{name : {menu.name} price: {menu.price} qty: 1}]
   const [booked, setBooked] = useState([]);
   // counter sera utiliser pour le + le - et le compteur
-  const [counters, setCounters] = useState(0);
 
   //Requête Axios
   const fetchData = async () => {
@@ -52,8 +48,6 @@ function App() {
           isLoading={isLoading}
           booked={booked}
           setBooked={setBooked}
-          counters={counters}
-          setCounters={setCounters}
         />
         <Footer />
       </div>
