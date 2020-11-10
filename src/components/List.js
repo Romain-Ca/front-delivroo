@@ -14,10 +14,20 @@ const List = ({ data, setData, isLoading, booked, setBooked }) => {
               {menu.meals.map((item, index) => {
                 return (
                   // Au click sur un menu on push dans le tableau booked :
-                  // Le menu : {item.title}
-                  // Le prix : {item.price}
-                  // Une quantité de 1
-                  <div className="menu-items-items">
+                  //Faut-il éviter un refresh ??
+                  <div
+                    className="menu-items-items"
+                    onClick={() => {
+                      const newBooked = [...booked];
+                      newBooked.push({
+                        name: item.title,
+                        price: item.price,
+                        qty: 1,
+                      });
+                      setBooked(newBooked);
+                      console.log(newBooked);
+                    }}
+                  >
                     <div className="MenuItem">
                       <div className="MenuIem-text">
                         <h3>{item.title}</h3>
@@ -47,7 +57,7 @@ const List = ({ data, setData, isLoading, booked, setBooked }) => {
         <div className="Cart--card">
           <button className="Cart--validate">Valider mon panier</button>
           <div>
-            {/* Au click sur un menu on push une nouvelle div Cart -- items */}
+            {/* Au click sur un menu on push une nouvelle div Cart--items */}
             <div className="Cart--items">
               <div className="Cart--line">
                 <div className="Cart--counter">

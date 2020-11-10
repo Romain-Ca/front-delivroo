@@ -7,6 +7,18 @@ import Header from "./components/Header";
 import List from "./components/List";
 import Footer from "./components/Footer";
 
+//import FontAwesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faPlusCircle,
+  faMinusCircle,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faMinusCircle, faPlusCircle, faStar);
+{
+  /* <FontAwesomeIcon icon="key" /> */
+}
+
 function App() {
   // Changement d'Etat useState
   const [data, setData] = useState([]);
